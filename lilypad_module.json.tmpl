@@ -15,7 +15,7 @@
                     "./start_service.sh"
                 ],
                 "EnvironmentVariables": [
-                    {{ if .LighthouseToken }}"{{ subst "LIGHTHOUSE_TOKEN=%s" .LighthouseToken }}",{{ end }}
+                    {{ if .LighthouseKey }}"{{ subst "LIGHTHOUSE_KEY=%s" .LighthouseKey }}",{{ end }}
                     {{ if .CID }}"{{ subst "CID=%s" .CID }}",{{ end }}
                     {{ if .PrivateKey }}"{{ subst "PRIVATE_KEY=%s" .PrivateKey }}",{{ end }}
                     {{ if .TradeContractAddress }}"{{ subst "TRADE_CONTRACT_ADDRESS=%s" .TradeContractAddress }}",{{ end }}
@@ -38,4 +38,3 @@
         }
     }
 }
-.
